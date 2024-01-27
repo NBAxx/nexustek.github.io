@@ -1,0 +1,1336 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+:root
+{
+    --primary-colour : #A020F0;
+    --secondary-colour : #99C845;
+    --text-color : #4d4d4d;
+    --text-color2 : #fff; 
+    --background-color : #fff;
+    --border-top : rgba(0,0,0,0.1);
+    --box-shadow : rgba(0,0,0,0.6);
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color)
+}
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* UTILITIESs */
+.container{
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.container-fluid
+{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.flex
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+
+.grid
+{
+    display: grid;
+}
+
+/* header */
+
+#header 
+{
+    background-color: #fff;
+    height: 120px;
+    padding: 0px;
+    padding-top: 20px;
+    align-items: center;
+    transition: 0.6s;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.sticky
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.6s;
+}
+
+#header .topinfo
+{
+    float: right;
+    margin-right: 20px;
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+#header .topinfo .fa
+{
+    color: var(--secondary-colour);
+    margin-left: 20px;
+    margin-right: 10px;
+
+}
+
+#header .navbar
+{
+    border-top: 1px solid var(--border-top);
+}
+
+#header .flex
+{
+    justify-content: space-between;
+}
+
+.navbar ul, .navbar nav
+{
+    display: flex;
+}
+
+.navbar .logo img
+{
+    width: 400px;
+    position: relative;
+    transition: 0.6s;
+}
+
+.navbar ul li
+{
+    position: relative;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.navbar ul .itarrow
+{
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.navbar ul li:hover .itarrow
+{
+    transform: rotate(180deg);
+}
+
+.navbar ul li .itsub
+{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    line-height: 40px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 3px 10px 0px var(--box-shadow);
+    background-color: var(--background-color);
+}
+
+.navbar ul li .itsub li
+{
+    padding: 0 22px;
+    border-bottom: 1px solid var(--border-top);
+    transition: 0.3s;
+    display: flex;
+    width: 300px;
+}
+
+.navbar ul li .menu
+{
+    display: block;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+.navbar nav ul li:hover .itsub
+{
+    display: block;
+}
+
+.navbar ul li .itsub li .subarrow1,
+.navbar ul li .itsub li .subarrow2,
+.navbar ul li .itsub li .subarrow3,
+.navbar ul li .itsub li .subarrow4
+{
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.navbar ul li .itsub li:hover .subarrow1,
+.navbar ul li .itsub li:hover .subarrow2,
+.navbar ul li .itsub li:hover .subarrow3,
+.navbar ul li .itsub li:hover .subarrow4
+{
+    transform: rotate(180deg);
+}
+
+.navbar ul li .itsub li .subinfo1,
+.navbar ul li .itsub li .subinfo2,
+.navbar ul li .itsub li .subinfo3,
+.navbar ul li .itsub li .subinfo4
+{
+    display: none;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius:10px;
+    background-color: var(--background-color);
+    box-shadow: 0px 3px 10px 0px var(--box-shadow);
+}
+
+.navbar ul li .itsub li .subinfo1 p,
+.navbar ul li .itsub li .subinfo2 p,
+.navbar ul li .itsub li .subinfo3 p,
+.navbar ul li .itsub li .subinfo4 p
+{
+    text-transform: capitalize;
+}
+
+.navbar ul li .itsub li:hover .subinfo1,
+.navbar ul li .itsub li:hover .subinfo2,
+.navbar ul li .itsub li:hover .subinfo3,
+.navbar ul li .itsub li:hover .subinfo4
+{
+    display: block;
+}
+
+.navbar nav ul .close
+{
+    display: none;
+}
+
+.navbar #icon
+{
+    color: var(--secondary-colour);
+    font-size: 30px;
+    margin: 0 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#firstphase
+{
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/background2.jpg);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#firstphase .container h1
+{
+    font-size: 60px;
+}
+
+#firstphase .container .tech
+{
+    width: 70%;
+    margin: 20px;
+    font-size: 45px;
+}
+
+#firstphase .container .blocks
+{
+    display: block;
+    width: 30%;
+}
+
+#firstphase .container .blocks .box1
+{
+    width: 400px;
+    height: 60px;
+    background-color: #A020F0;
+    margin-bottom: 20px;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#firstphase .container .blocks .box2
+{
+    width: 400px;
+    height: 60px;
+    background-color: #9c36db;
+    margin-bottom: 20px;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#firstphase .container .blocks .box3
+{
+    width: 400px;
+    height: 60px;
+    background-color: #905db0;
+    margin-bottom: 20px;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#firstphase .container .blocks .box4
+{
+    width: 400px;
+    height: 60px;
+    background-color: #9bb46f;
+    margin-bottom: 20px;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#firstphase .container .blocks .box5
+{
+    width: 400px;
+    height: 60px;
+    background-color: #99C845;
+    margin-bottom: 20px;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#firstphase .container .blocks .box1:hover,
+#firstphase .container .blocks .box2:hover,
+#firstphase .container .blocks .box3:hover,
+#firstphase .container .blocks .box4:hover,
+#firstphase .container .blocks .box5:hover
+{
+    transform: scale(1.2);
+    background-color: rgb(36, 5, 5);
+}
+
+#firstphase .container .blocks p
+{
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--text-color2);
+    text-transform: capitalize;
+}
+
+#firstphase .container .blocks i
+{
+    font-size: 20px;
+    color: var(--text-color2);
+    margin: 20px;
+}
+
+#secondphase .container
+{
+    margin: 100px auto;
+    padding: 20px auto;
+    padding-bottom: 100px;
+    border-bottom: 1px solid var(--border-top);
+}
+
+#secondphase .container .content h2
+{
+    font-size: 30px;
+    margin: 20px auto;
+}
+
+#secondphase .container .content p
+{
+    font-size: 16px;
+    font-weight: 900;
+}
+
+#thirdphase .container
+{
+    margin: 100px auto;
+    padding: 20px auto;
+    padding-bottom: 100px;
+}
+
+#thirdphase .container .content h2
+{
+    font-size: 30px;
+    margin: 20px auto;
+}
+
+#thirdphase .container .content p
+{
+    font-size: 16px;
+    font-weight: 900;
+}
+
+#fourthphase
+{
+    width: 100%;
+    padding-top: 100px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/background3.jpg);
+    background-attachment: fixed;
+}
+
+#fourthphase .container
+{
+    margin: 0px auto;
+    padding: 20px auto;
+    padding-bottom: 100px;
+    color: #f8f6f6;
+}
+
+#fourthphase .container .image img
+{
+    width: 300px;
+}
+
+#fourthphase .container .content h2
+{
+    font-size: 30px;
+    margin: 20px auto;
+    color: var(--text-color2);
+}
+
+#fourthphase .container .content p
+{
+    font-size: 16px;
+    font-weight: 900;
+}
+
+#fifthphase .container
+{
+    margin: 100px auto;
+    padding: 20px auto;
+    padding-bottom: 100px;
+    border-bottom: 1px solid var(--border-top);
+}
+
+#fifthphase .container .content h2
+{
+    font-size: 30px;
+    margin: 20px auto;
+}
+
+#fifthphase .container .content p
+{
+    font-size: 16px;
+    font-weight: 900;
+}
+
+#fifthphase .container .image img
+{
+    width: 300px;
+    border-radius: 50%;
+}
+
+#sixthphase .container
+{
+    margin: 100px auto;
+    padding: 20px auto;
+    padding-bottom: 100px;
+    border-bottom: 5px dotted var(--border-top);
+
+}
+
+#sixthphase .container .content
+{
+    text-align: center;
+}
+
+#sixthphase .container .content h2
+{
+    font-size: 30px;
+    margin: 20px auto;
+}
+
+#sixthphase .container .content p
+{
+    font-size: 16px;
+    font-weight: 900;
+}
+
+#sixthphase .container .flex{
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#sixthphase .container .flex h3
+{
+    font-size: 23px;
+    text-decoration: bold;
+}
+
+#sixthphase .container .flex div
+{
+    text-align: center;
+    margin: 20px;
+}
+
+#sixthphase .container .flex div img
+{
+    width: 100px;
+}
+
+#seventhphase
+{
+    width: 100%;
+    background: linear-gradient(to left,var(--secondary-colour),var(--primary-colour));
+}
+
+#seventhphase .container
+{
+    padding-top: 120px;
+    color: var(--text-color2);
+    padding-bottom: 100px;
+}
+
+#seventhphase .container .content .div
+{
+    margin-bottom: 80px;
+}
+
+#seventhphase .container .content h1
+{
+    font-size: 30px;
+    color: #5d0296;
+    pad: 20px auto;
+    margin-top: 20px;
+}
+
+#seventhphase .container .content .faq
+{
+    border-bottom: 1px solid rgba(224, 222, 222, 0.6);
+    margin: 20px auto;
+    padding-bottom: 20px;
+}
+
+#seventhphase .container .content .faq h2
+{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#seventhphase .container .content .faq .ans
+{
+    margin-top: 20px;
+    display: none;
+}
+
+#seventhphase .container .content .faq.active .quearrow
+{
+    transform: rotate(90deg);
+}
+
+#seventhphase .container .more
+{
+    text-align: center;
+    padding: 20px auto;
+}
+
+#seventhphase .container .more .btn
+{
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    color: var(--text-color2);
+    background: var(--text-color);
+    border-radius: 5px;
+    font-family: 'Titillium Web', sans-serif;
+    cursor: pointer;
+}
+
+#footer .container
+{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#footer .container .left
+{
+    text-align: left;
+}
+
+#footer .container .left p
+{
+    margin-top: 20px;
+}
+
+#footer .container .left a
+{
+    color: var(--primary-colour);
+}
+
+#footer .container .left a:hover
+{
+    color: var(--secondary-colour);
+}
+
+#footer .container .left .link i
+{
+    margin: 10px;
+    width: 50px;
+    background: linear-gradient(120deg, var(--primary-colour), var(--secondary-colour));
+    color: var(--text-color2);
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+#footer .container .left .link i:hover
+{
+    background: linear-gradient(to left, var(--primary-colour), var(--secondary-colour));
+}
+
+#footer .container .center
+{
+    text-align: left;
+}
+
+#footer .container .center ul li
+{
+    margin: 10px;
+}
+
+#footer .container .right
+{
+    text-align: center;
+}
+#footer .container .right ul
+{
+    margin: 30px 10px;
+}
+
+#footer .container .right ul li
+{
+    margin: 10px auto;
+}
+
+#footer .container div img
+{
+    width: 300px;
+}
+
+#footer .copy
+{
+    border-top: 1px solid var(--border-top);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding-top: 20px;
+}
+
+
+
+
+@media (max-width:1300px) {
+
+    #firstphase .container .tech
+    {
+        width:50%;
+        margin: 10px;
+        font-size: 35px;
+    }
+
+    #firstphase .container .blocks
+    {
+        display: block;
+        width: 30%;
+    }
+
+    #firstphase .container .blocks .box
+    {
+        width: 300px;
+        height: 60px;
+    }
+
+    #secondphase .container
+    {
+        margin: 100px 50px;
+    }
+
+    #thirdphase .container
+    {
+        margin: 100px 50px;
+
+    }
+
+    #fourthphase .container
+    {
+        margin: 0px 50px;
+    }
+
+    #fifthphase .container
+    {
+        margin: 100px 50px;
+    }
+
+    #sixthphase .container
+    {
+        margin: 100px 50px;
+    }
+
+    #seventhphase .container
+    {
+        margin: 50px 50px;
+    }
+
+    #footer .container
+    {
+        margin: auto 50px;
+    }
+}
+
+
+@media (max-width:1000px) {
+     
+    #header
+    {
+        height: 170px;  
+    }
+
+    .navbar 
+    {
+        display: block;
+    }
+
+    .navbar .logo
+    {
+        text-align: center;
+    }
+
+    .navbar nav
+    {
+        justify-content: center;
+    }
+
+    #sixthphase .container .flex{
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    #footer .container .right
+    {
+        text-align: left;
+    }
+}
+
+@media (max-width:850px) {
+
+    #firstphase
+    {
+        width: 100%;
+        height: 800px;
+    }
+
+    #firstphase .container
+    {
+        display: block;
+        align-content: center;
+    }
+
+    #firstphase .container .tech
+    {
+        width:90%;
+        margin: 20px;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    #firstphase .container .blocks
+    {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #firstphase .container .blocks .box
+    {
+        width: 400px;
+        height: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #secondphase .container
+    {
+        display: block;
+        margin: 100px 50px;
+        padding: 20px auto;
+        padding-bottom: 100px;
+    }
+
+    #secondphase .container .image
+    {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+
+    #thirdphase .container
+    {
+        display: block;
+        margin: 100px 50px;
+        padding-bottom: 0px;
+    }
+
+    #thirdphase .container .image
+    {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+
+    #thirdphase .container .image img
+    {
+        width: 300px;
+    }
+
+    #fourthphase
+    {
+        width: 100%;
+        padding-top: 100px;
+    }
+
+    #fourthphase .container
+    {
+        display: block;
+        margin: 0px 50px;
+        padding: 20px auto;
+    }
+
+    #fourthphase .container .image
+    {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+
+    #fourthphase .container .image img
+    {
+        width: 500px;
+    }
+
+    #fifthphase .container
+    {
+        display: block;
+        margin: 100px 50px;
+        padding-bottom: 0px;
+    }
+
+    #fifthphase .container .image
+    {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+
+    #fifthphase .container .image img
+    {
+        width: 400px;
+    }
+}
+
+@media (max-width:700px) {
+     
+    #header
+    {
+        height: 120px;  
+    }
+
+    .navbar
+    {
+        display: flex;
+    }
+
+    .navbar nav ul
+    {
+        display: block;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        display: none;
+        background-color: #fff;
+        padding-top: 100px;
+        transition: all 1s ease;
+        color: var(--primary-colour);
+    }
+
+    .sticky2
+    {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: 0.6s;
+    }
+
+    .navbar ul li
+    {
+        position: relative;
+        padding: 20px;
+        margin: 0 5px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 900;
+        transition: 0.3s;
+        border-bottom: 1px solid var(--border-top);
+        color: var(--primary-colour);
+    }
+
+
+    .navbar ul li a
+    {
+        color: var(--primary-colour);
+    }
+
+    .navbar ul .itarrow
+    {
+        font-size: 16px;
+        margin-left: 25px;
+    }
+
+
+    .navbar ul li .itsub
+    {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 0;
+        height: fit-content;
+        border-radius: none;
+        box-shadow: none;
+        line-height: 40px;
+        background-color: #fff;
+    }
+
+    .navbar ul li .itsub li a
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 30px;
+        color: var(--primary-colour);
+    }
+
+    .navbar ul li .itsub li .subarrow1,
+    .navbar ul li .itsub li .subarrow2,
+    .navbar ul li .itsub li .subarrow3,
+    .navbar ul li .itsub li .subarrow4
+    {
+        font-size: 16px;
+        margin-left: 200px;
+        cursor: pointer;
+    }
+
+    .navbar ul li .itsub li .subinfo1,
+    .navbar ul li .itsub li .subinfo2,
+    .navbar ul li .itsub li .subinfo3,
+    .navbar ul li .itsub li .subinfo4
+    {
+        display: none;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        padding: 10px;
+        transition: 3s;
+        margin-left: 0px;
+        transition: 0.6s;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .navbar nav ul .close
+    {
+        font-size: 40px;
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 20px;
+        cursor: pointer;
+    }
+    
+    .navbar nav ul li:hover .itsub
+    {
+        display: none;
+    }
+
+    .navbar #icon
+    {
+        display: block;
+    }
+
+    .navbar ul li:hover i.itarrow
+    {
+        transform: rotate(0deg);
+    }
+
+    .navbar ul.show1 li .itsub.submenu
+    {
+        display: block;
+    }
+
+    .navbar ul li .itsub li
+    {
+        display: block;
+    }
+
+    .navbar ul.show2 li i.itarrow
+    {
+        transform: rotate(180deg);
+    }
+
+    .navbar ul li .itsub li:hover .subarrow1,
+    .navbar ul li .itsub li:hover .subarrow2,
+    .navbar ul li .itsub li:hover .subarrow3,
+    .navbar ul li .itsub li:hover .subarrow4
+    {
+        transform: rotate(0deg);
+    }
+
+    .navbar ul li .itsub li:hover .subinfo1,
+    .navbar ul li .itsub li:hover .subinfo2,
+    .navbar ul li .itsub li:hover .subinfo3,
+    .navbar ul li .itsub li:hover .subinfo4
+    {
+        display: none;
+    }
+
+    .navbar ul.show2 li .itsub li .subinfo1
+    {
+        display: block;
+    }
+
+    .navbar ul.show3 li .itsub li .subinfo2
+    {
+        display: block;
+    }
+
+    .navbar ul.show4 li .itsub li .subinfo3
+    {
+        display: block;
+    }
+
+    .navbar ul.show5 li .itsub li .subinfo4
+    {
+        display: block;
+    }
+
+    .navbar ul.show2 li .itsub li .subarrow1,
+    .navbar ul.show3 li .itsub li .subarrow2,
+    .navbar ul.show4 li .itsub li .subarrow3,
+    .navbar ul.show5 li .itsub li .subarrow4
+    {
+        transform: rotate(180deg);
+    }
+}
+
+@media (max-width:500px) {
+    #header
+    {
+        height: 100px;
+    }
+
+    .navbar .logo img
+    {
+        width: 300px;
+        position: relative;
+        transition: 0.6s;
+        margin-left: 30px;
+    }
+
+    .navbar #icon
+    {
+        font-size: 20px;
+        margin-left: -50px;
+    }
+
+    #firstphase
+    {
+        display: block;
+    }
+
+
+    #firstphase .container h1
+    {
+        font-size: 40px;
+    }
+
+    #firstphase .container .tech
+    {
+        width: 90%;
+        margin: 20px;
+    }
+
+    #firstphase .container .tech .image img
+    {
+        width: 400px;
+    }
+
+    #firstphase .container .blocks .box
+    {
+        width: 300px;
+    }
+
+    #fourthphase .container .image img
+    {
+        width: 400px;
+    }
+    
+}
+
+@media (max-width:400px) {
+    #header
+    {
+        height: 80px;
+    }
+
+    #header .topinfo
+    {
+        float: right;
+        margin-right: 40px;
+        font-size: 9px;
+        margin-top: -5px;
+        height: 5px;
+        margin-bottom: -90px;
+    }
+
+    #header .navbar
+    {
+        margin-top: -10px;
+    }
+
+
+    .navbar .logo img
+    {
+        width: 200px;
+        margin-left: 30px;
+    }
+
+    .navbar #icon
+    {
+        font-size: 20px;
+        margin-left: -150px;
+        padding: 10px;
+    }
+
+    .navbar nav ul
+    {
+        padding-top: 50px;
+    }
+
+    .navbar nav ul .close
+    {
+    font-size: 20px;
+    }
+
+    .navbar ul li
+    {
+        padding: 10px;
+        margin: 0 5px;
+        font-size: 10px;
+    }
+
+    .navbar ul li .itsub li .subinfo1 p,
+    .navbar ul li .itsub li .subinfo2 p,
+    .navbar ul li .itsub li .subinfo3 p,
+    .navbar ul li .itsub li .subinfo4 p
+    {
+        text-transform: capitalize;
+        font-size: 9;
+    }
+
+    #firstphase
+    {
+        height: 500px;
+    }
+
+    #firstphase .container h1
+    {
+        font-size: 20px;
+    }
+
+    #firstphase .container .tech
+    {
+        width: 90%;
+        margin: 20px;
+    }
+
+    #firstphase .container .tech .image img
+    {
+        width: 200px;
+    }
+
+    #firstphase .container .blocks .box
+    {
+        width: 200px;
+        height: 40px;
+    }
+
+    #firstphase .container .blocks p
+    {
+        font-size: 10px;
+    }
+
+    #firstphase .container .blocks i
+    {
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    #fourthphase .container .image img
+    {
+        width: 300px;
+    }
+
+    #fifthphase .container .image img
+    {
+        width: 300px;
+    }
+
+    #secondphase .container .content h2
+    {
+        font-size: 20px;
+    }
+
+    #secondphase .container .content p
+    {
+        font-size: 13px;
+    }
+
+    #thirdphase .container .content h2
+    {
+        font-size: 20px;
+    }
+
+    #thirdphase .container .content p
+    {
+        font-size: 13px;
+    }
+
+    #fourthphase .container .content h2
+    {
+        font-size: 20px;
+    }
+
+    #fourthphase .container .content p
+    {
+        font-size: 13px;
+    }
+
+    #fifthphase .container .content h2
+    {
+        font-size: 20px;
+    }
+
+    #fifthphase .container .content p
+    {
+        font-size: 13px;
+    }
+
+    #sixthphase .container .content h2
+    {
+        font-size: 20px;
+    }
+
+    #sixthphase .container .content p
+    {
+        font-size: 13px;
+    }
+
+    #sixthphase .container .flex h3
+    {
+        font-size: 16px;
+    }
+
+    #sixthphase .container .flex div img
+    {
+        width: 70px;
+    }
+
+    #seventhphase .container .content h1
+    {
+        font-size: 20px;
+    }
+
+    #seventhphase .container .content .faq h2
+    {
+        font-size: 16px;
+    }
+
+    #seventhphase .container .content .faq .ans p
+    {
+        font-size: 13;
+    }
+
+    #seventhphase .container .more h1
+    {
+        font-size: 20px;
+    }
+
+    #seventhphase .container .more .btn
+    {
+        width: 150px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    #footer .container div img
+    {
+        width: 200px;
+    }
+}
