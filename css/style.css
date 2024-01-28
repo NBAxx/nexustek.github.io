@@ -194,6 +194,11 @@ a
     cursor: pointer;
 }
 
+.display
+{
+    display: none;
+}
+
 .navbar ul li .itsub li:hover .subarrow1,
 .navbar ul li .itsub li:hover .subarrow2,
 .navbar ul li .itsub li:hover .subarrow3,
@@ -215,6 +220,8 @@ a
     border-radius:10px;
     background-color: var(--background-color);
     box-shadow: 0px 3px 10px 0px var(--box-shadow);
+    padding: 5px;
+    text-align: center;
 }
 
 .navbar ul li .itsub li .subinfo1 p,
@@ -233,6 +240,99 @@ a
     display: block;
 }
 
+.navbar ul .cuarrow
+{
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.navbar ul li:hover .cuarrow
+{
+    transform: rotate(180deg);
+}
+
+.navbar ul li .cusub
+{
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    line-height: 40px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 3px 10px 0px var(--box-shadow);
+    background-color: var(--background-color);
+    z-index: 2;
+}
+
+.navbar ul li .cusub li
+{
+    padding: 0 22px;
+    border-bottom: 1px solid var(--border-top);
+    transition: 0.3s;
+    display: flex;
+    width: 300px;
+}
+
+.navbar ul li .menu
+{
+    display: block;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+.navbar nav ul li:hover .cusub
+{
+    display: block;
+}
+
+.navbar ul li .cusub li .cusubarrow1,
+.navbar ul li .cusub li .cusubarrow2,
+.navbar ul li .cusub li .cusubarrow3
+{
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.navbar ul li .cusub li:hover .cusubarrow1,
+.navbar ul li .cusub li:hover .cusubarrow2,
+.navbar ul li .cusub li:hover .cusubarrow3
+{
+    transform: rotate(180deg);
+}
+
+.navbar ul li .cusub li .cusubinfo1,
+.navbar ul li .cusub li .cusubinfo2,
+.navbar ul li .cusub li .cusubinfo3
+{
+    display: none;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    border-radius:10px;
+    background-color: var(--background-color);
+    box-shadow: 0px 3px 10px 0px var(--box-shadow);
+    padding: 5px;
+    text-align: center;
+}
+
+.navbar ul li .cusub li .cusubinfo1 p,
+.navbar ul li .cusub li .cusubinfo2 p,
+.navbar ul li .cusub li .cusubinfo3 p
+{
+    text-transform: capitalize;
+}
+
+.navbar ul li .cusub li:hover .cusubinfo1,
+.navbar ul li .cusub li:hover .cusubinfo2,
+.navbar ul li .cusub li:hover .cusubinfo3
+{
+    display: block;
+}
+
 .navbar nav ul .close
 {
     display: none;
@@ -245,6 +345,30 @@ a
     margin: 0 30px;
     cursor: pointer;
     display: none;
+}
+
+.chat
+{
+    background-color: var(--primary-colour);
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    width: 65px;
+    height: 60px;
+    pointer-events: auto;
+    transition: all .4s;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat i
+{
+    font-size: 25px;
+    color: var(--background-color);
 }
 
 #firstphase
@@ -475,7 +599,6 @@ a
     padding: 20px auto;
     padding-bottom: 100px;
     border-bottom: 5px dotted var(--border-top);
-
 }
 
 #sixthphase .container .content
@@ -700,6 +823,96 @@ a
     font-weight: bold;
 }
 
+#office .container
+{
+    text-align: center;
+    margin: 100px auto;
+}
+
+#office .container h1
+{
+    font-size: 40px;
+    margin: 100px auto;
+}
+
+#office .container .office .image
+{
+    margin-right: 50px;
+}
+
+#office .container .office .image img
+{
+    width: 500px;
+}
+
+#office .container .office .content
+{
+    text-align: left;
+}
+
+#office .container .office .content p
+{
+    font-size: 16px;
+    font-weight: 900;
+}
+
+#office .container .flex2
+{
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+#office .container .flex2 div
+{
+    margin: 10px 40px;
+}
+
+#office .container .flex2 div img
+{
+    width: 100px;
+    transition: all 0.6s ease-in-out;
+}
+
+#office .container .flex2 div img:hover
+{
+    margin-top: -20px;
+}
+
+#office .container .flex2 div h3
+{
+    font-size: 20px;
+    text-decoration: bold;
+}
+
+#locations
+{
+    background-color: #fbf9f9;
+}
+
+#locations .container
+{
+    text-align: center;
+    padding: 100px;
+}
+
+#locations .container h2
+{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+#locations .container h3
+{
+    color: var(--primary-colour);
+}
+
+#locations .container p
+{
+    font-size: 16px;
+    font-weight: 900;
+}
 
 /* Footer */
 
@@ -781,13 +994,27 @@ a
     width: 300px;
 }
 
+#footer .location
+{
+    width: 60%;
+    border-top: 1px solid var(--border-top);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+#footer .location div
+{
+    text-align: center;
+    margin: 20px;
+}
+
 #footer .copy
 {
-    border-top: 1px solid var(--border-top);
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px;
     padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -850,7 +1077,12 @@ a
         margin: auto 50px;
     }
 
-    #footer .container
+    #office .container
+    {
+        margin: 100px 50px;  
+    }
+
+    #footer .container.info
     {
         margin: auto 50px;
     }
@@ -882,6 +1114,11 @@ a
     #sixthphase .container .flex{
         justify-content: center;
         align-content: center;
+        flex-wrap: wrap;
+    }
+
+    #office .container .office
+    {
         flex-wrap: wrap;
     }
 
@@ -986,7 +1223,7 @@ a
 
     #fourthphase .container .image img
     {
-        width: 500px;
+        width: 450px;
     }
 
     #fifthphase .container
@@ -1008,7 +1245,6 @@ a
         width: 400px;
     }
 
-    
 }
 
 @media (max-width:700px) {
@@ -1047,6 +1283,12 @@ a
         transition: 0.6s;
     }
 
+    
+    .navbar #icon
+    {
+        display: block;
+    }
+
     .navbar ul li
     {
         position: relative;
@@ -1058,6 +1300,17 @@ a
         transition: 0.3s;
         border-bottom: 1px solid var(--border-top);
         color: var(--primary-colour);
+    }
+
+    .navbar nav ul .close
+    {
+        font-size: 40px;
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 20px;
+        cursor: pointer;
     }
 
 
@@ -1101,9 +1354,18 @@ a
     .navbar ul li .itsub li .subarrow3,
     .navbar ul li .itsub li .subarrow4
     {
+        display: none;
+    }
+
+    .navbar ul li .itsub li .subarrow1.display,
+    .navbar ul li .itsub li .subarrow2.display,
+    .navbar ul li .itsub li .subarrow3.display,
+    .navbar ul li .itsub li .subarrow4.display
+    {
         font-size: 16px;
-        margin-left: 200px;
+        margin-left: 250px;
         cursor: pointer;
+        display: block;
     }
 
     .navbar ul li .itsub li .subinfo1,
@@ -1122,26 +1384,10 @@ a
         width: 100%;
         background-color: #fff;
     }
-
-    .navbar nav ul .close
-    {
-        font-size: 40px;
-        display: flex;
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 20px;
-        cursor: pointer;
-    }
     
     .navbar nav ul li:hover .itsub
     {
         display: none;
-    }
-
-    .navbar #icon
-    {
-        display: block;
     }
 
     .navbar ul li:hover i.itarrow
@@ -1207,6 +1453,142 @@ a
     {
         transform: rotate(180deg);
     }
+
+    .navbar ul .cuarrow
+    {
+        font-size: 16px;
+        margin-left: 25px;
+    }
+
+
+    .navbar ul li .cusub
+    {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 0;
+        height: fit-content;
+        border-radius: none;
+        box-shadow: none;
+        line-height: 40px;
+        background-color: #fff;
+    }
+
+    .navbar ul li .cusub li a
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 30px;
+        color: var(--primary-colour);
+    }
+
+    .navbar ul li .cusub li .cusubarrow1,
+    .navbar ul li .cusub li .cusubarrow2,
+    .navbar ul li .cusub li .cusubarrow3
+    {
+        display: none;
+    }
+
+    .navbar ul li .cusub li .cusubarrow1.display,
+    .navbar ul li .cusub li .cusubarrow2.display,
+    .navbar ul li .cusub li .cusubarrow3.display
+    {
+        font-size: 16px;
+        margin-left: 250px;
+        cursor: pointer;
+        display: block;
+    }
+
+    .navbar ul li .cusub li .cusubinfo1,
+    .navbar ul li .cusub li .cusubinfo2,
+    .navbar ul li .cusub li .cusubinfo3,
+    .navbar ul li .cusub li .cusubinfo4
+    {
+        display: none;
+        position: relative;
+        top: 0px;
+        right: 0px;
+        padding: 10px;
+        transition: 3s;
+        margin-left: 0px;
+        transition: 0.6s;
+        width: 100%;
+        background-color: #fff;
+    }
+    
+    .navbar nav ul li:hover .cusub
+    {
+        display: none;
+    }
+
+    .navbar ul li:hover i.cuarrow
+    {
+        transform: rotate(0deg);
+    }
+
+    .navbar ul.cushow1 li .cusub.cusubmenu
+    {
+        display: block;
+    }
+
+    .navbar ul li .cusub li
+    {
+        display: block;
+    }
+
+    .navbar ul.cushow2 li i.cuarrow
+    {
+        transform: rotate(180deg);
+    }
+
+    .navbar ul li .cusub li:hover .cusubarrow1,
+    .navbar ul li .cusub li:hover .cusubarrow2,
+    .navbar ul li .cusub li:hover .cusubarrow3,
+    .navbar ul li .cusub li:hover .cusubarrow4
+    {
+        transform: rotate(0deg);
+    }
+
+    .navbar ul li .cusub li:hover .cusubinfo1,
+    .navbar ul li .cusub li:hover .cusubinfo2,
+    .navbar ul li .cusub li:hover .cusubinfo3
+    {
+        display: none;
+    }
+
+    .navbar ul.cushow2 li .cusub li .cusubinfo1
+    {
+        display: block;
+    }
+
+    .navbar ul.cushow3 li .cusub li .cusubinfo2
+    {
+        display: block;
+    }
+
+    .navbar ul.cushow4 li .cusub li .cusubinfo3
+    {
+        display: block;
+    }
+
+    .navbar ul.cushow5 li .cusub li .cusubinfo4
+    {
+        display: block;
+    }
+
+    .navbar ul.cushow2 li .cusub li .cusubarrow1,
+    .navbar ul.cushow3 li .cusub li .cusubarrow2,
+    .navbar ul.cushow4 li .cusub li .cusubarrow3
+    {
+        transform: rotate(180deg);
+    }
+
+    #footer .location
+    {
+        justify-content: center;
+    }
 }
 
 @media (max-width:500px) {
@@ -1270,6 +1652,25 @@ a
     {
         margin: 0 10px;
     }
+
+    #office .container .office
+    {
+        margin-top: -60px;
+    }
+
+    #office .container .office .image img
+    {
+        width: 400px;
+    }
+    #office .container h1
+    {
+        font-size: 30px;
+    }
+
+    #office .container .flex2
+    {
+        margin: 50px 50px;  
+    }
     
 }
 
@@ -1283,7 +1684,7 @@ a
     {
         float: right;
         margin-right: 40px;
-        font-size: 9px;
+        font-size: 8px;
         margin-top: -5px;
         height: 5px;
         margin-bottom: -90px;
@@ -1485,6 +1886,37 @@ a
     }
 
     #card .container div p
+    {
+        font-size: 13px;
+    }
+
+    #office .container h1
+    {
+        font-size: 20px;
+    }
+
+    #office .container .office .image img
+    {
+        width: 250px;
+    }
+
+    #office .container .office .content p
+    {
+        font-size: 13px;
+        font-weight: 900;
+    }
+
+    #office .container .flex2 div h3
+    {
+        font-size: 16px;
+    }
+
+    #office .container .flex2 div img
+    {
+        width: 100px;
+    }
+
+    #office .container .fleX2 div h3
     {
         font-size: 13px;
     }
